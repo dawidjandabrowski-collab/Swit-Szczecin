@@ -20,7 +20,7 @@
   --line-2:rgba(255,255,255,.16);
   --muted:rgba(255,255,255,.55);
   --muted-2:rgba(255,255,255,.7);
-  --side:160px;
+  --side:195px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:var(--bg);color:#fff;font-family:'Barlow',system-ui,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased}
@@ -43,7 +43,7 @@ img,svg{display:block;max-width:100%}
   padding:14px var(--side);max-width:1920px;margin:0 auto;
 }
 .brand{display:flex;align-items:center;gap:12px}
-.brand .crest{height:52px;width:auto;display:block}
+.brand .crest{height:52px;width:auto;display:block;mix-blend-mode:screen}
 .brand-text{line-height:1;white-space:nowrap}
 .brand-text .b1{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.04em;font-size:14px;display:block}
 .brand-text .b2{font-family:'Barlow',sans-serif;font-weight:500;font-size:9px;letter-spacing:.36em;color:var(--muted);text-transform:uppercase;margin-top:3px;display:block}
@@ -60,7 +60,7 @@ img,svg{display:block;max-width:100%}
   color:rgba(255,255,255,.38);text-transform:uppercase;font-weight:400;white-space:nowrap;
 }
 
-.nav-right{display:flex;align-items:center;justify-content:flex-end;gap:12px;width:320px}
+.nav-right{display:flex;align-items:center;justify-content:flex-end;gap:12px;width:352px}
 .divider-v{width:1px;height:16px;background:var(--line-2)}
 .social{display:flex;align-items:center;gap:10px}
 .icon-btn{width:26px;height:26px;display:grid;place-items:center;color:rgba(255,255,255,.65);transition:color .2s}
@@ -82,18 +82,21 @@ img,svg{display:block;max-width:100%}
 
 /* ============ MATCH PANEL ============ */
 .match-panel-wrap{
-  position:absolute;top:80px;right:var(--side);z-index:50;min-width:310px;
-  width:320px;pointer-events:auto;
+  position:absolute;top:82px;left:0;right:0;z-index:50;
+  max-width:1920px;margin:0 auto;padding:0 var(--side);
+  pointer-events:none;
 }
 .match-panel{
   display:flex;align-items:center;gap:0;
   background:transparent;
+  margin-left:auto;width:352px;
+  pointer-events:auto;width:352px;
 }
 .mp-league-img{height:36px;width:auto;display:block;flex-shrink:0;margin-right:10px}
 .mp-divider{width:2px;align-self:stretch;background:var(--blue-bright);min-height:44px;flex-shrink:0;margin-right:12px}
 .mp-body{display:flex;align-items:center;justify-content:space-between;flex:1;gap:10px}
 .mp-left{display:flex;align-items:center;gap:9px}
-.mp-left .crest-s{height:28px;width:28px;object-fit:contain;flex-shrink:0}
+.mp-left .crest-s{height:28px;width:28px;object-fit:contain;flex-shrink:0;mix-blend-mode:screen}
 .mp-team{font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:.07em;color:#fff;text-transform:uppercase;line-height:1}
 .mp-when{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted-2);letter-spacing:.06em;margin-top:3px}
 .mp-right{display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0}
@@ -132,7 +135,7 @@ img,svg{display:block;max-width:100%}
 }
 .hero-content{
   position:relative;z-index:5;height:100%;
-  display:grid;grid-template-columns:1fr 320px;gap:40px;
+  display:grid;grid-template-columns:1fr 352px;gap:40px;
   padding:0 var(--side) 52px;max-width:1920px;margin:0 auto;
   align-items:end;
 }
@@ -146,7 +149,7 @@ img,svg{display:block;max-width:100%}
 .eyebrow .meta{color:var(--muted);font-weight:400;letter-spacing:.22em}
 .hero h1{
   font-family:'Oswald',sans-serif;font-weight:700;
-  font-size:72px;line-height:.92;letter-spacing:-.025em;
+  font-size:74px;line-height:.92;letter-spacing:-.025em;
   text-transform:uppercase;color:#fff;
 }
 .hero h1 .accent{color:var(--blue-bright);font-style:italic;font-weight:600}
@@ -187,7 +190,7 @@ img,svg{display:block;max-width:100%}
 .strip-item:hover{transform:translateX(3px)}
 .strip-item:hover .ti-title{color:var(--blue-bright)}
 .ti-img{
-  height:46px;background:#0d1a33;position:relative;overflow:hidden;
+  height:54px;background:#0d1a33;position:relative;overflow:hidden;
   background-image:repeating-linear-gradient(115deg,#0a1830 0 4px,#0d1f3d 4px 8px);
 }
 .ti-num{position:absolute;left:5px;bottom:3px;font-family:'Oswald',sans-serif;font-size:10px;color:rgba(255,255,255,.7)}
@@ -273,7 +276,7 @@ img,svg{display:block;max-width:100%}
 .match-round{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.18em;margin-bottom:44px}
 .match-fixture{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;margin-bottom:44px}
 .team{display:flex;flex-direction:column;align-items:center;gap:16px}
-.team .badge img{height:100px;width:auto;object-fit:contain}
+.team .badge img{height:100px;width:auto;object-fit:contain;mix-blend-mode:screen}
 .team-name{font-family:'Oswald',sans-serif;font-weight:700;font-size:42px;text-transform:uppercase;letter-spacing:-.01em;line-height:.95}
 .team-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
 .vs{font-family:'Oswald',sans-serif;font-weight:600;font-size:20px;letter-spacing:.42em;color:var(--muted);padding:16px 8px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -318,7 +321,7 @@ img,svg{display:block;max-width:100%}
 footer{padding:80px 0 28px;background:#04070d;position:relative}
 .footer-inner{max-width:1920px;margin:0 auto;padding:0 var(--side)}
 .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:48px;padding-bottom:54px;border-bottom:1px solid var(--line)}
-.f-brand .crest-f{height:56px;width:auto;margin-bottom:18px}
+.f-brand .crest-f{height:56px;width:auto;margin-bottom:18px;mix-blend-mode:screen}
 .f-brand h4{font-family:'Oswald',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;letter-spacing:-.005em}
 .f-brand .tag{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.34em;color:var(--blue-bright);text-transform:uppercase;margin-top:3px}
 .f-brand address{margin-top:18px;font-style:normal;color:var(--muted-2);font-size:13px;line-height:1.75}
