@@ -55,7 +55,7 @@
   .menu a:hover::after{right:0}
   .menu a.active{color:#fff}
   .menu a.active::after{right:0;background:var(--blue-bright)}
-  .menu a .sub{position:absolute;top:100%;left:50%;transform:translateX(-50%);display:block;font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.18em;color:rgba(255,255,255,.4);margin-top:3px;text-transform:uppercase;font-weight:400;white-space:nowrap}
+  .menu a .sub{position:absolute;top:calc(100% - 2px);left:50%;transform:translateX(-50%);display:block;font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.18em;color:rgba(255,255,255,.4);margin-top:2px;text-transform:uppercase;font-weight:400;white-space:nowrap}
   .menu a:hover .sub{color:var(--blue-bright)}
 
   .nav-right{display:flex;align-items:center;justify-content:flex-end;gap:10px;width:352px}
@@ -119,14 +119,14 @@
   .match-panel{
     margin-left:auto;
     background:transparent;
-    display:flex;align-items:center;gap:14px;
+    display:flex;align-items:center;justify-content:space-between;
     width:352px;
     pointer-events:auto;
-    border-left:2px solid var(--blue-bright);padding-left:14px;
+    border-left:2px solid var(--blue-bright);padding-left:14px;padding-right:0;
   }
   
   
-  .mp-content{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:8px 0}
+  .mp-content{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:8px 0;flex:1}
   .mp-left{display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:center;padding-left:0}
   .mp-left img.crest-img{height:32px;width:32px;object-fit:contain;display:block}
   .mp-team{font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;letter-spacing:.06em;color:#fff;text-transform:uppercase;line-height:1}
@@ -355,7 +355,7 @@
     <nav class="menu">
       <a href="#" class="active">News</a>
       <a href="#">Klub</a>
-      <a href="#" style="padding-bottom:16px">Tabela<span class="sub">14. miejsce</span></a>
+      <a href="#" style="position:relative;padding-bottom:6px">Tabela<span class="sub">14. miejsce</span></a>
       <a href="#">Rozgrywki</a>
       <a href="#">Akademia</a>
       <a href="#">Sklep</a>
